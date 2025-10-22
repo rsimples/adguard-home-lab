@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  agduard:
+    container_name: adguard-home
+    image: adguard/adguardhome:latest
+    restart: unless-stopped
+    networks:
+      - adguard_net
+    environment:
+      - TZ=America/Sao_Paulo
+    ports:
+      - "3000:3000/tcp"   # Setup wizard (first run)
+      - "53:53/tcp"       # DNS TCP
+      - "53:53/udp"       # DNS UDP
+      - "80:80/tcp"       # Web UI (after setup)
+      - "443:443/tcp"     # HTTPS (optional)
+    volumes:
+      - ./volumes/adguard_conf:/opt/adguardhome/conf
+      - .//volumes/adguard_conf:/opt/adguardhome/work
+
+networks:
+  adguard_net:
+    driver: bridge
