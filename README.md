@@ -231,21 +231,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## Contributing
-
-Contributions are welcome! Feel free to:
-- Report bugs and issues
-- Suggest new features
-- Submit pull requests
-
----
-
-## Author
-
-**Rafael Simples**
-
----
-
 ## Acknowledgments
 
 - AdGuard Team for the excellent AdGuard Home software
